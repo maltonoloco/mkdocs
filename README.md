@@ -53,3 +53,7 @@ docker-compose up -d
 
 - **docs/**  
   Contains all your MkDocs content files (Markdown files, images, etc.). These files are also available at [mkdocs_test_doc repository](https://github.com/maltonoloco/mkdocs_test_doc).
+
+# Github Pages
+
+The Documentation with versioning is [here](https://maltonoloco.github.io/mkdocs_test_doc/) available

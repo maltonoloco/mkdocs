@@ -1,10 +1,6 @@
 #!/bin/sh
 set -e
 
-# Fix SSH key permissions
-chmod 600 /root/.ssh/id_ed25519 || true
-chown root:root /root/.ssh/config || true
-
 if [ ! -d /docs/.git ]; then
   echo "No .git folder found in /docs. Cloning repository..."
   rm -rf /docs/* 2>/dev/null || true

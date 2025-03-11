@@ -8,30 +8,15 @@ This repository contains a Docker-based setup for an [MkDocs](https://www.mkdocs
 
 ```bash
 .
-├── config
-├── container.pub
 ├── Dockerfile
 ├── docker-compose.yml
-├── docs
-├── id_ed25519
+├── entrypoint.sh
 ├── mkdocs.yml
 └── README.md
 ```
 
-- **docs/**  
-  Contains all your MkDocs content files (Markdown files, images, etc.). These files are also available at [github.com/maltonoloco/mkdocs_test_doc](https://github.com/maltonoloco/mkdocs_test_doc).
-
 - **mkdocs.yml**  
   The main MkDocs configuration file. Customize site settings, plugins, and themes here.
-
-- **config**  
-  An SSH config file used within the Docker container to set up SSH-based operations (e.g., Git pulls, GitHub access).
-
-- **id_ed25519**  
-  A secret key used for GitHub authorization inside the Docker container. **Make sure you handle this securely** and consider excluding it from version control in real-world scenarios.
-
-- **container.pub**  
-  The public key associated with `id_ed25519`.
 
 - **Dockerfile**  
   Defines the image that will be used to build and serve the MkDocs documentation. Installs necessary dependencies and configures SSH.
@@ -62,7 +47,9 @@ cd mkdocs
 ### Run the Container
 
 ```bash
-docker-compose up
+mkdir docs # create docs directory
+docker-compose up -d
 ```
 
-By default, MkDocs will be served from inside the container on port 8000. Open [http://localhost](http://localhost) in your browser to view the documentation.
+- **docs/**  
+  Contains all your MkDocs content files (Markdown files, images, etc.). These files are also available at [mkdocs_test_doc repository](https://github.com/maltonoloco/mkdocs_test_doc).

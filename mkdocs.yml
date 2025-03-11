@@ -1,0 +1,72 @@
+site_name: MkDocs Dokumentation
+site_url: http://localhost:8000/
+site_author: "Malte Kottmann"
+repo_url: https://github.com/maltonoloco/mkdocs_test_doc
+repo_name: maltonoloco/mkdocs_test_doc
+edit_uri: ""
+docs_dir: /docs
+site_dir: /site
+
+theme:
+  name: material
+  palette:
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Dark mode
+      primary: green
+      accent: deep purple
+
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Light mode
+      primary: blue
+      accent: deep orange
+
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.instant
+
+nav:
+  - Home: latest/index.html
+  - Guides:
+    - First Guide: guides/guide1.md
+    - Second Guide: guides/guide2.md
+  - Reference:
+    - Module A: reference/module_a.md
+    - Module B: reference/module_b.md
+  - Code:
+    - Python Code: code-bsp.md
+
+# Mike and search plugins
+plugins:
+  - search
+  - mike:
+      alias_type: symlink
+      redirect_template: null
+      deploy_prefix: ''
+      canonical_version: null
+      version_selector: true
+      css_dir: css
+      javascript_dir: js
+
+docs_dir: /docs
+
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
+extra:
+  version:
+    provider: mike

@@ -30,7 +30,7 @@ theme:
     - navigation.instant
 
 nav:
-  - Home: latest/index.html
+  - Home: index.md
   - Guides:
     - First Guide: guides/guide1.md
     - Second Guide: guides/guide2.md

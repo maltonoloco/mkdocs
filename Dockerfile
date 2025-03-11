@@ -11,10 +11,6 @@ RUN pip install mike
 RUN git config --global user.name "maltonoloco" \
  && git config --global user.email "malte.kottmann@web.de"
 
-# Add github hostkey to known_hosts
-RUN mkdir -p /root/.ssh \
- && ssh-keyscan github.com >> /root/.ssh/known_hosts
-
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 

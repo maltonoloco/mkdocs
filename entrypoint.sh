@@ -11,10 +11,5 @@ else
   git pull
 fi
 
-# switch branch to gh-pages
-cd /docs
-echo "Switch branch to gh-pages"
-git checkout gh-pages
-
 # Start MkDocs dev server on port 8000
 mkdocs serve -f /mkdocs.yml -a 0.0.0.0:8000

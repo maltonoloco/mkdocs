@@ -1,7 +1,7 @@
 FROM squidfunk/mkdocs-material
 
 WORKDIR /
-COPY mkdocs.yml /
+COPY mkdocs.yml /mkdocs.yml
 
 RUN pip install mkdocs-macros-plugin
 RUN pip install mkdocs-glightbox

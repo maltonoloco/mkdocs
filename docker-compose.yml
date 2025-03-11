@@ -7,8 +7,6 @@ services:
     volumes:
       - "./docs:/docs"
       - "./mkdocs.yml:/mkdocs.yml"
-      - "./config:/root/.ssh/config"
-      - "./id_ed25519:/root/.ssh/id_ed25519"
 
     ports:
       - "80:8000"

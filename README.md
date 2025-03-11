@@ -56,4 +56,4 @@ docker-compose up -d
 
 # Github Pages
 
-The Documentation with versioning is [here](https://maltonoloco.github.io/mkdocs_test_doc/) available
+The Documentation with versioning is [here](https://maltonoloco.github.io/mkdocs_test_doc/latest) available

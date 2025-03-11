@@ -54,19 +54,10 @@ This repository contains a Docker-based setup for an [MkDocs](https://www.mkdocs
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/maltonoloco/mkdocs_test_doc
+git clone https://github.com/maltonoloco/mkdocs
 cd mkdocs
 ```
 
-*(Adjust the clone URL or directory name if necessary.)*
-
-### Build the Docker Image
-
-```bash
-docker-compose build
-```
-
-This command uses the `Dockerfile` to build a custom image for MkDocs, including any SSH setup needed for Git operations.
 
 ### Run the Container
 

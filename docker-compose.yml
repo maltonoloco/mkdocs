@@ -1,0 +1,14 @@
+services:
+  mkdocs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: "mkdocs"
+    volumes:
+      - "/opt/mkdocs/docs:/docs"
+      - "/opt/mkdocs/mkdocs.yml:/mkdocs.yml"
+      - "/opt/mkdocs/config:/root/.ssh/config"
+      - "/opt/mkdocs/id_ed25519:/root/.ssh/id_ed25519"
+
+    ports:
+      - "80:8000"

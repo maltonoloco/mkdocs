@@ -8,7 +8,7 @@ chown root:root /root/.ssh/config || true
 if [ ! -d /docs/.git ]; then
   echo "No .git folder found in /docs. Cloning repository..."
   rm -rf /docs/* 2>/dev/null || true
-  git clone git@github.com:maltonoloco/mkdocs_test_doc.git docs/
+  git clone https://github.com/maltonoloco/mkdocs_test_doc.git docs/
 else
   echo "Git repository found in /docs. Pulling latest changes..."
   cd /docs/

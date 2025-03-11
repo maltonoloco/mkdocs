@@ -27,6 +27,9 @@ This repository contains a Docker-based setup for an [MkDocs](https://www.mkdocs
 - **README.md**  
   This file.
 
+- **entrypoint.sh**
+  Clones or pulls the content of [this repository](https://github.com/maltonoloco/mkdocs_test_doc) in /docs inside the docker container everytime the container starts.
+
 ---
 
 ## Getting Started

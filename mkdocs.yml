@@ -31,6 +31,7 @@ theme:
 
 nav:
   - Home: index.md
+  - Doc: Test_docs.md
   - Guides:
     - First Guide: guides/guide1.md
     - Second Guide: guides/guide2.md

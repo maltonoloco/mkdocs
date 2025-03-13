@@ -7,6 +7,8 @@ services:
     volumes:
       - "./docs:/docs"
       - "./mkdocs.yml:/mkdocs.yml"
+    env_file:
+      - .env
 
     ports:
       - "80:8000"

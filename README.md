@@ -39,6 +39,20 @@ This repository contains a Docker-based setup for an [MkDocs](https://www.mkdocs
 - [Docker](https://www.docker.com/)
 - [Docker Compose](https://docs.docker.com/compose/)
 
+#### Github Authetication
+You need a fine-grained Personal Access Token (PAT) for the documentation repository. This is required for the mike plugin to deploy new versions.
+
+#### PAT
+The PAT need this permissions:
+- metadata (read)
+- contents (read and write)
+
+#### .env file
+store the PAT in the .env file
+```
+GITHUB_TOKEN=your_personal_access_token
+```
+
 ### Clone the Repository
 
 ```bash

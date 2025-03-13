@@ -1,6 +1,10 @@
 #!/bin/sh
 set -e
 
+if [ -n "$GITHUB_TOKEN" ]; then
+  echo "https://${GITHUB_TOKEN}:x-oauth-basic@github.com" > /root/.git-credentials
+fi
+
 if [ ! -d /docs/.git ]; then
   echo "No .git folder found in /docs. Cloning repository..."
   rm -rf /docs/* 2>/dev/null || true

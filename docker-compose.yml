@@ -7,8 +7,8 @@ services:
     volumes:
       - "./docs:/docs"
       - "./mkdocs.yml:/mkdocs.yml"
-    environment:
-      - GITHUB_TOKEN=$(GITHUB_TOKEN)
+    env_file:
+      - .env
 
     ports:
       - "80:8000"
